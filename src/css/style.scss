@@ -1,0 +1,49 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(251, 247, 247);
+  color: rgb(161, 159, 159);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  max-width: 600px;
+}
+table {
+  thead {
+    td {
+      padding-right: 20px;
+      font-weight: 700;
+      color: #000;
+    }
+
+  }
+}
+.desc, .asc{
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/arrow-down-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.asc {
+  &:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
